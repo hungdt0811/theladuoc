@@ -1,3 +1,5 @@
+import { hide } from "@popperjs/core"
+
 export const managementMenu = {
 	category: {
 		id: 'category',
@@ -198,6 +200,12 @@ export const developmentMenu = {
 				text: 'Phân quyền',
 				path: 'tinh-nang/phan-quyen',
 				icon: 'People',
+			},
+			permissionFeatureAdd: {
+				id: 'permissionFeatureAdd',
+				text: 'Thêm mới nhóm quyền',
+				path: 'tinh-nang/them-moi-phan-quyen',
+				hide: true,
 			},
 			elearningFeature: {
 				id: 'elearningFeature',

@@ -7,8 +7,9 @@ import SubHeader, {
 } from '../../../layout/SubHeader/SubHeader';
 import Page from '../../../layout/Page/Page';
 
-import CommonPermissionAlert from '../feature-permission/common/CommonPermissionAlert';
-import CommenPermissionTable from '../feature-permission/common/CommonPermissionTable';
+import { developmentMenu } from '../../../menu-ct';
+import CommonPermissionAlert from './common/CommonPermissionAlert';
+import CommenPermissionTable from './common/CommonPermissionTable';
 import Button from '../../../components/bootstrap/Button';
 
 const FeaturePermissionList = () => {
@@ -19,7 +20,11 @@ const FeaturePermissionList = () => {
 					<span className='h4 mb-0 fw-bold'>Danh sách nhóm quyền</span>
 				</SubHeaderLeft>
 				<SubHeaderRight>
-					<Button tag='a' to={`../tinh-nang/them-moi-nhom-quyen`} color='success' isLight>
+					<Button
+						tag='a'
+						to={`../${developmentMenu.featureCategory.subMenu.permissionFeatureAdd.path}`}
+						color='success'
+						isLight>
 						Thêm mới
 					</Button>
 				</SubHeaderRight>

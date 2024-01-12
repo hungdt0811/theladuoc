@@ -4,7 +4,6 @@ import {
 	managementMenu,
 	developmentMenu,
 } from '../menu-ct';
-import Login from '../pages/presentation/auth/Login';
 
 // Khai bao component can su dung
 const QUAN_LY = {
@@ -12,6 +11,7 @@ const QUAN_LY = {
 }
 const FEATURE_PERMISSION = {
 	LIST: lazy(() => import('../pages/custom/feature-permission/FeaturePermissionList')),
+	ADD: lazy(() => import('../pages/custom/feature-permission/FeaturePermissionAdd')),
 }
 
 const presentation: RouteProps[] = [
@@ -25,6 +25,10 @@ const feature: RouteProps[] = [
 	{
 		path: developmentMenu.featureCategory.subMenu.permissionFeature.path,
 		element: <FEATURE_PERMISSION.LIST />
+	},
+	{
+		path: developmentMenu.featureCategory.subMenu.permissionFeatureAdd.path,
+		element: <FEATURE_PERMISSION.ADD />
 	}
 ]
 
