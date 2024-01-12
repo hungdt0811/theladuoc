@@ -16,3 +16,9 @@
 .border-transparent {
 	--#{$prefix}border-opacity: 0;
 }
+
+.table-permis-feature {
+	.mw-colname {
+		min-width: 230px;
+	}
+}
