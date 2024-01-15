@@ -1,3 +1,3 @@
-// import path from 'node:path';
+const currentModulePath = new URL(import.meta.url).pathname;
 
-// export default path.dirname(process.mainModule.filename);
+export default currentModulePath;

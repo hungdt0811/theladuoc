@@ -1,15 +1,17 @@
 import React, { lazy } from 'react';
 import { RouteProps } from 'react-router-dom';
 import {
-	managementMenu,
-	developmentMenu,
-
 	componentPagesMenu,
 	dashboardPagesMenu,
 	demoPagesMenu,
 	gettingStartedPagesMenu,
 	pageLayoutTypesPagesMenu,
 } from '../menu';
+// import {
+// 	managementMenu,
+// 	developmentMenu,
+// } from '../menu-ct';
+
 import Login from '../pages/presentation/auth/Login';
 
 const LANDING = {
