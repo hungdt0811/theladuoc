@@ -12,6 +12,9 @@ const MANAGEMENT = {
 		LIST: lazy(() => import('../pages/custom/permission/PermissionList')),
 		ADD: lazy(() => import('../pages/custom/permission/PermissionAdd')),
 		EDIT: lazy(() => import('../pages/custom/permission/PermissionEdit')),
+	},
+	STUDENT: {
+		LIST: lazy(() => import('../pages/custom/student/StudentList')),
 	}
 }
 
@@ -45,7 +48,15 @@ const management: RouteProps[] = [
 	{
 		path: `${managementMenu.permission.subPath.permissionEdit.path}/:id`,
 		element: <MANAGEMENT.PERMISSION.EDIT />
-	}
+	},
+	{
+		path: managementMenu.studentCategory.subMenu.penddingType.path,
+		element: <MANAGEMENT.STUDENT.LIST />
+	},
+	{
+		path: managementMenu.studentCategory.subMenu.freeType.path,
+		element: <MANAGEMENT.STUDENT.LIST />
+	},
 ]
 
 const feature: RouteProps[] = [

@@ -52,20 +52,8 @@ export const managementMenu = {
 			},
 			freeType: {
 				id: 'freeType',
-				text: 'Miễn phí',
-				path: 'hoc-vien/mien-phi',
-				icon: 'AccountCircle',
-			},
-			boughtType: {
-				id: 'boughtType',
-				text: 'Mua vé',
-				path: 'hoc-vien/mua-ve',
-				icon: 'AccountCircle',
-			},
-			jouney: {
-				id: 'jouney',
-				text: 'Hành trình',
-				path: 'hoc-vien/hanh-trinh',
+				text: 'Đang chăm',
+				path: 'hoc-vien/dang-cham',
 				icon: 'AccountCircle',
 			},
 		},
@@ -75,26 +63,6 @@ export const managementMenu = {
 		text: 'Diễn giả',
 		path: 'dien-gia',
 		icon: 'Attribution',
-		subMenu: {
-			communityOwner: {
-				id: 'communityOwner',
-				text: 'Chủ cộng đồng',
-				path: 'dien-gia/chu-cong-dong',
-				icon: 'AccountCircle',
-			},
-			individual: {
-				id: 'individual',
-				text: 'Cá nhân',
-				path: 'dien-gia/ca-nhan',
-				icon: 'AccountCircle',
-			},
-			insideCommunity: {
-				id: 'insideCommunity',
-				text: 'Thuộc cộng đồng',
-				path: 'dien-gia/thuoc-cong-dong',
-				icon: 'AccountCircle',
-			},
-		},
 	},
 	permission: {
 		id: 'permission',
