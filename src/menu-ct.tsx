@@ -1,3 +1,5 @@
+import { hide } from "@popperjs/core"
+
 export const managementMenu = {
 	category: {
 		id: 'category',
@@ -94,13 +96,22 @@ export const managementMenu = {
 			},
 		},
 	},
-	decentralization: {
-		id: 'decentralization',
+	permission: {
+		id: 'permission',
 		text: 'Phân quyền',
 		path: 'phan-quyen',
 		icon: 'AccountTree',
+		subPath: {
+			permissionAdd: {
+				text: 'Thêm mới nhóm quyền',
+				path: 'phan-quyen/them-moi',
+			},
+			permissionEdit: {
+				text: 'Chỉnh sửa nhóm quyền',
+				path: 'phan-quyen/chinh-sua',
+			},
+		},
 	},
-
 }
 
 export const developmentMenu = {

@@ -4,11 +4,15 @@ import {
 	managementMenu,
 	developmentMenu,
 } from '../menu-ct';
-import Login from '../pages/presentation/auth/Login';
 
 // Khai bao component can su dung
 const MANAGEMENT = {
 	DASHBOARD: lazy(() => import('../pages/custom/synthesis_report/synthesis_report')),
+	PERMISSION: {
+		LIST: lazy(() => import('../pages/custom/permission/PermissionList')),
+		ADD: lazy(() => import('../pages/custom/permission/PermissionAdd')),
+		EDIT: lazy(() => import('../pages/custom/permission/PermissionEdit')),
+	}
 }
 
 const DEVELOPMENT = {
@@ -31,8 +35,19 @@ const management: RouteProps[] = [
 		path: managementMenu.reportCategory.subMenu.synthesisReport.path,
 		element: <MANAGEMENT.DASHBOARD />
 	},
+	{
+		path: managementMenu.permission.path,
+		element: <MANAGEMENT.PERMISSION.LIST />
+	},
+	{
+		path: managementMenu.permission.subPath.permissionAdd.path,
+		element: <MANAGEMENT.PERMISSION.ADD />
+	},
+	{
+		path: `${managementMenu.permission.subPath.permissionEdit.path}/:id`,
+		element: <MANAGEMENT.PERMISSION.EDIT />
+	}
 ]
-
 const feature: RouteProps[] = [
 	// {
 	// 	path: developmentMenu.featureCategory.subMenu.permissionFeature.path,
@@ -50,7 +65,9 @@ const feature: RouteProps[] = [
 		path: developmentMenu.featureCategory.subMenu.websiteFeature.path,
 		element: <DEVELOPMENT.WEBSITE.LIST />
 	}
+	
 ]
+
 
 const contents = [...management, ...feature];
 
