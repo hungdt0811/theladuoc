@@ -5,7 +5,8 @@
 @use 'sass:map';
 
 .scroll-margin {
-	scroll-margin-top: map.get($header, height) + map.get($subheader, height) + map.get($page, padding-y);
+	scroll-margin-top: map.get($header, height) + map.get($subheader, height) +
+		map.get($page, padding-y);
 }
 
 .sticky-top-size {
@@ -14,24 +15,4 @@
 
 .border-transparent {
 	--#{$prefix}border-opacity: 0;
-}
-
-.table-permis-feature {
-	.mw-colname {
-		min-width: 230px;
-	}
-}
-
-.cursor-pointer {
-	label {
-		cursor: pointer;
-	}
-}
-
-.custom-form-check {
-	.form-check {
-		.form-check-label {
-			padding-top: 3px;
-		}
-	}
 }
