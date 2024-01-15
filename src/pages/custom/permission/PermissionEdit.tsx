@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { useFormik } from 'formik';
 import PageWrapper from '../../../layout/PageWrapper/PageWrapper';
 import Page from '../../../layout/Page/Page';
@@ -11,17 +12,19 @@ import Card, { CardBody, CardFooter, CardFooterLeft, CardFooterRight, CardHeader
 import Textarea from '../../../components/bootstrap/forms/Textarea';
 import Checks from '../../../components/bootstrap/forms/Checks';
 
-const PermissionAdd = () => {
+const PermissionEdit = () => {
+	const { id } = useParams();
+
 	const formik = useFormik({
 		initialValues: {
-			roleName: '',
-			roleDescription: '',
+			roleName: 'Biên tập viên',
+			roleDescription: 'Quản lý danh sách bài viết, viết bài, chỉnh sửa bài',
 			permissionGroups: [
 				{
 					id: 1,
 					label: 'Danh mục',
 					permissions: [
-						{ id: 2, label: 'Xem danh sách', isChecked: false },
+						{ id: 2, label: 'Xem danh sách', isChecked: true },
 						{ id: 3, label: 'Thêm mới', isChecked: false },
 						{ id: 4, label: 'Chỉnh sửa', isChecked: false },
 						{ id: 5, label: 'Xoá', isChecked: false },
@@ -29,13 +32,13 @@ const PermissionAdd = () => {
 				},
 				{
 					id: 10,
-					label: 'Tài khoản',
+					label: 'Bài viết',
 					name: 'permisstion2',
 					permissions: [
-						{ id: 11, label: 'Permission 10', isChecked: false },
-						{ id: 12, label: 'Permission 11', isChecked: false },
-						{ id: 13, label: 'Permission 12', isChecked: false },
-						{ id: 14, label: 'Permission 13', isChecked: false },
+						{ id: 11, label: 'Xem danh sách', isChecked: true },
+						{ id: 12, label: 'Thêm mới', isChecked: true },
+						{ id: 13, label: 'Chỉnh sửa', isChecked: true },
+						{ id: 14, label: 'Xoá', isChecked: true },
 					],
 				},
 			],
@@ -107,11 +110,11 @@ const PermissionAdd = () => {
 	};
 
 	return (
-		<PageWrapper title={managementMenu.permission.subPath.permissionAdd.text}>
+		<PageWrapper title={managementMenu.permission.subPath.permissionEdit.text}>
 			<Page container='fluid'>
 				<Card stretch tag='form' noValidate onSubmit={formik.handleSubmit}>
 					<CardHeader>
-						<h3>{managementMenu.permission.subPath.permissionAdd.text}</h3>
+						<h3>{managementMenu.permission.subPath.permissionEdit.text}</h3>
 					</CardHeader>
 					<CardBody>
 						<div className='row'>
@@ -193,7 +196,7 @@ const PermissionAdd = () => {
 								type='submit'
 								color='success'
 								isDisable={!formik.isValid && !!formik.submitCount}>
-								Thêm mới
+								Cập nhật
 							</Button>
 						</CardFooterRight>
 					</CardFooter>
@@ -203,4 +206,4 @@ const PermissionAdd = () => {
 	);
 };
 
-export default PermissionAdd;
+export default PermissionEdit;

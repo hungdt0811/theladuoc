@@ -101,12 +101,16 @@ export const managementMenu = {
 		text: 'Phân quyền',
 		path: 'phan-quyen',
 		icon: 'AccountTree',
-	},
-	permissionAdd: {
-		id: 'permissionAdd',
-		text: 'Thêm mới nhóm quyền',
-		path: 'phan-quyen/them-moi',
-		hide: true,
+		subPath: {
+			permissionAdd: {
+				text: 'Thêm mới nhóm quyền',
+				path: 'phan-quyen/them-moi',
+			},
+			permissionEdit: {
+				text: 'Chỉnh sửa nhóm quyền',
+				path: 'phan-quyen/chinh-sua',
+			},
+		},
 	},
 }
 

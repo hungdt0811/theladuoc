@@ -11,6 +11,7 @@ const MANAGEMENT = {
 	PERMISSION: {
 		LIST: lazy(() => import('../pages/custom/permission/PermissionList')),
 		ADD: lazy(() => import('../pages/custom/permission/PermissionAdd')),
+		EDIT: lazy(() => import('../pages/custom/permission/PermissionEdit')),
 	}
 }
 
@@ -38,8 +39,12 @@ const management: RouteProps[] = [
 		element: <MANAGEMENT.PERMISSION.LIST />
 	},
 	{
-		path: managementMenu.permissionAdd.path,
+		path: managementMenu.permission.subPath.permissionAdd.path,
 		element: <MANAGEMENT.PERMISSION.ADD />
+	},
+	{
+		path: `${managementMenu.permission.subPath.permissionEdit.path}/:id`,
+		element: <MANAGEMENT.PERMISSION.EDIT />
 	}
 ]
 

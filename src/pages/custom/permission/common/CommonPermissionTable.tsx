@@ -8,6 +8,7 @@ import data from '../../../../common/data/dummyEventsData';
 import PaginationButtons, { dataPagination, PER_COUNT } from '../../../../components/PaginationButtons';
 import useSortableData from '../../../../hooks/useSortableData';
 import useDarkMode from '../../../../hooks/useDarkMode';
+import { managementMenu } from '../../../../menu-ct';
 
 interface ICommonPermissionTableProps {
 	isFluid?: boolean;
@@ -54,6 +55,8 @@ const CommonPermissionTable: FC<ICommonPermissionTableProps> = ({ isFluid }) => 
 											})}
 											icon='Edit'
 											aria-label='Chỉnh sửa'
+											tag='a'
+											to={`../${managementMenu.permission.subPath.permissionEdit.path}/${item.id}`}
 										/>
 										<Button
 											isOutline={!darkModeStatus}

@@ -22,7 +22,7 @@ const PermissionList = () => {
 				<SubHeaderRight>
 					<Button
 						tag='a'
-						to={`../${managementMenu.permissionAdd.path}`}
+						to={`../${managementMenu.permission.subPath.permissionAdd.path}`}
 						color='success'
 						isLight>
 						Thêm mới
