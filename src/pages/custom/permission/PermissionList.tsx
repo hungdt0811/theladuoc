@@ -7,22 +7,22 @@ import SubHeader, {
 } from '../../../layout/SubHeader/SubHeader';
 import Page from '../../../layout/Page/Page';
 
-import { developmentMenu } from '../../../menu-ct';
+import { managementMenu } from '../../../menu-ct';
 import CommonPermissionAlert from './common/CommonPermissionAlert';
 import CommenPermissionTable from './common/CommonPermissionTable';
 import Button from '../../../components/bootstrap/Button';
 
-const FeaturePermissionList = () => {
+const PermissionList = () => {
 	return (
-		<PageWrapper title={demoPagesMenu.sales.subMenu.dashboard.text}>
+		<PageWrapper title={managementMenu.permission.text}>
 			<SubHeader>
 				<SubHeaderLeft>
-					<span className='h4 mb-0 fw-bold'>Danh sách nhóm quyền</span>
+					<span className='h4 mb-0 fw-bold'>{managementMenu.permission.text}</span>
 				</SubHeaderLeft>
 				<SubHeaderRight>
 					<Button
 						tag='a'
-						to={`../${developmentMenu.featureCategory.subMenu.permissionFeatureAdd.path}`}
+						to={`../${managementMenu.permissionAdd.path}`}
 						color='success'
 						isLight>
 						Thêm mới
@@ -43,4 +43,4 @@ const FeaturePermissionList = () => {
 	);
 };
 
-export default FeaturePermissionList;
+export default PermissionList;

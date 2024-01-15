@@ -96,13 +96,18 @@ export const managementMenu = {
 			},
 		},
 	},
-	decentralization: {
-		id: 'decentralization',
+	permission: {
+		id: 'permission',
 		text: 'Phân quyền',
 		path: 'phan-quyen',
 		icon: 'AccountTree',
 	},
-
+	permissionAdd: {
+		id: 'permissionAdd',
+		text: 'Thêm mới nhóm quyền',
+		path: 'phan-quyen/them-moi',
+		hide: true,
+	},
 }
 
 export const developmentMenu = {
@@ -194,18 +199,6 @@ export const developmentMenu = {
 				text: 'Quản lý nhân sự',
 				path: 'tinh-nang/quan-ly-nhan-su',
 				icon: 'People',
-			},
-			permissionFeature: {
-				id: 'permissionFeature',
-				text: 'Phân quyền',
-				path: 'tinh-nang/phan-quyen',
-				icon: 'People',
-			},
-			permissionFeatureAdd: {
-				id: 'permissionFeatureAdd',
-				text: 'Thêm mới nhóm quyền',
-				path: 'tinh-nang/them-moi-phan-quyen',
-				hide: true,
 			},
 			elearningFeature: {
 				id: 'elearningFeature',

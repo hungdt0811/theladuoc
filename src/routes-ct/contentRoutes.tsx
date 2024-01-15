@@ -8,10 +8,10 @@ import {
 // Khai bao component can su dung
 const MANAGEMENT = {
 	DASHBOARD: lazy(() => import('../pages/custom/synthesis_report')),
-}
-const FEATURE_PERMISSION = {
-	LIST: lazy(() => import('../pages/custom/feature-permission/FeaturePermissionList')),
-	ADD: lazy(() => import('../pages/custom/feature-permission/FeaturePermissionAdd')),
+	PERMISSION: {
+		LIST: lazy(() => import('../pages/custom/permission/PermissionList')),
+		ADD: lazy(() => import('../pages/custom/permission/PermissionAdd')),
+	}
 }
 
 const DEVELOPMENT = {
@@ -32,17 +32,21 @@ const presentation: RouteProps[] = [
 	}
 ]
 
-const feature: RouteProps[] = [
+const management: RouteProps[] = [
 	{
-		path: developmentMenu.featureCategory.subMenu.permissionFeature.path,
-		element: <FEATURE_PERMISSION.LIST />
+		path: managementMenu.permission.path,
+		element: <MANAGEMENT.PERMISSION.LIST />
 	},
 	{
-		path: developmentMenu.featureCategory.subMenu.permissionFeatureAdd.path,
-		element: <FEATURE_PERMISSION.ADD />
+		path: managementMenu.permissionAdd.path,
+		element: <MANAGEMENT.PERMISSION.ADD />
 	}
 ]
 
-const contents = [...presentation, ...feature];
+const feature: RouteProps[] = [
+	
+]
+
+const contents = [...presentation, ...management, ...feature];
 
 export default contents;

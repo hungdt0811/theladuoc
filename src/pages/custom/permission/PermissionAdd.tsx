@@ -4,7 +4,7 @@ import { demoPagesMenu } from '../../../menu';
 import PageWrapper from '../../../layout/PageWrapper/PageWrapper';
 import SubHeader, { SubHeaderLeft } from '../../../layout/SubHeader/SubHeader';
 import Page from '../../../layout/Page/Page';
-import { developmentMenu } from '../../../menu-ct';
+import { managementMenu } from '../../../menu-ct';
 
 import Button from '../../../components/bootstrap/Button';
 import Input from '../../../components/bootstrap/forms/Input';
@@ -42,7 +42,7 @@ const validate = (values: IValues) => {
 	return errors;
 };
 
-const FeaturePermissionList = () => {
+const PermissionAdd = () => {
 	const formik = useFormik({
 		initialValues: {
 			roleName: '',
@@ -122,11 +122,11 @@ const FeaturePermissionList = () => {
 	};
 
 	return (
-		<PageWrapper title={developmentMenu.featureCategory.subMenu.permissionFeatureAdd.text}>
+		<PageWrapper title={managementMenu.permissionAdd.text}>
 			<Page container='fluid'>
 				<Card stretch tag='form' noValidate onSubmit={formik.handleSubmit}>
 					<CardHeader>
-						<h3>{developmentMenu.featureCategory.subMenu.permissionFeatureAdd.text}</h3>
+						<h3>{managementMenu.permissionAdd.text}</h3>
 					</CardHeader>
 					<CardBody>
 						<div className='row'>
@@ -218,4 +218,4 @@ const FeaturePermissionList = () => {
 	);
 };
 
-export default FeaturePermissionList;
+export default PermissionAdd;
