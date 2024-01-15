@@ -7,7 +7,8 @@ import User from '../../../layout/User/User';
 import {
 	managementMenu,
 	developmentMenu,
-
+} from '../../../menu-ct';
+import {
 	componentPagesMenu,
 	gettingStartedPagesMenu,
 } from '../../../menu';
