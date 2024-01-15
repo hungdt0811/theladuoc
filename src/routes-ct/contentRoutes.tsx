@@ -4,25 +4,54 @@ import {
 	managementMenu,
 	developmentMenu,
 } from '../menu-ct';
-import Login from '../pages/presentation/auth/Login';
 
 // Khai bao component can su dung
-const QUAN_LY = {
+const MANAGEMENT = {
 	DASHBOARD: lazy(() => import('../pages/custom/synthesis_report')),
+	PERMISSION: {
+		LIST: lazy(() => import('../pages/custom/permission/PermissionList')),
+		ADD: lazy(() => import('../pages/custom/permission/PermissionAdd')),
+		EDIT: lazy(() => import('../pages/custom/permission/PermissionEdit')),
+	}
+}
+
+const DEVELOPMENT = {
+	FORM: lazy(() => import('../pages/custom/form')),
 }
 
 const presentation: RouteProps[] = [
 	{
 		path: managementMenu.reportCategory.subMenu.synthesisReport.path,
-		element: <QUAN_LY.DASHBOARD />
-	}
+		element: <MANAGEMENT.DASHBOARD />
+	},
 
+
+	// Development
+	{
+		path: developmentMenu.featureCategory.subMenu.signUpAccountFeature.path,
+		element: <DEVELOPMENT.FORM />
+	}
 ]
 
-const documentation: RouteProps[] = [
+const management: RouteProps[] = [
+	{
+		path: managementMenu.permission.path,
+		element: <MANAGEMENT.PERMISSION.LIST />
+	},
+	{
+		path: managementMenu.permission.subPath.permissionAdd.path,
+		element: <MANAGEMENT.PERMISSION.ADD />
+	},
+	{
+		path: `${managementMenu.permission.subPath.permissionEdit.path}/:id`,
+		element: <MANAGEMENT.PERMISSION.EDIT />
+	}
+]
+
+const feature: RouteProps[] = [
 	
 ]
 
-const contents = [...presentation, ...documentation];
+const contents = [...presentation, ...management, ...feature];
 
 export default contents;
