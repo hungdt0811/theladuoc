@@ -1,31 +1,31 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useTour } from '@reactour/tour';
-import useDarkMode from '../../hooks/useDarkMode';
-import { demoPagesMenu } from '../../menu';
-import PageWrapper from '../../layout/PageWrapper/PageWrapper';
+import useDarkMode from '../../../hooks/useDarkMode';
+import { demoPagesMenu } from '../../../menu';
+import PageWrapper from '../../../layout/PageWrapper/PageWrapper';
 import SubHeader, {
 	SubHeaderLeft,
 	SubHeaderRight,
 	SubheaderSeparator,
-} from '../../layout/SubHeader/SubHeader';
-import Page from '../../layout/Page/Page';
-import { TABS, TTabs } from '../presentation/dashboard/common/helper';
-import Button, { ButtonGroup } from '../../components/bootstrap/Button';
+} from '../../../layout/SubHeader/SubHeader';
+import Page from '../../../layout/Page/Page';
+import { TABS, TTabs } from '../../presentation/dashboard/common/helper';
+import Button, { ButtonGroup } from '../../../components/bootstrap/Button';
 
-import CommonAvatarTeam from '../../common/other/CommonAvatarTeam';
+import CommonAvatarTeam from '../../../common/other/CommonAvatarTeam';
 
-import CommonDashboardAlert from '../presentation/dashboard/common/CommonDashboardAlert';
-import CommonDashboardUserCard from '../presentation/dashboard/common/CommonDashboardUserCard';
-import CommonDashboardMarketingTeam from '../presentation/dashboard/common/CommonDashboardMarketingTeam';
-import CommonDashboardDesignTeam from '../presentation/dashboard/common/CommonDashboardDesignTeam';
-import CommonDashboardIncome from '../presentation/dashboard/common/CommonDashboardIncome';
-import CommonDashboardRecentActivities from '../presentation/dashboard/common/CommonDashboardRecentActivities';
-import CommonDashboardUserIssue from '../presentation/dashboard/common/CommonDashboardUserIssue';
-import CommonDashboardSalesByStore from '../presentation/dashboard/common/CommonDashboardSalesByStore';
-import CommonDashboardWaitingAnswer from '../presentation/dashboard/common/CommonDashboardWaitingAnswer';
-import CommonMyWallet from '../_common/CommonMyWallet';
-import CommonDashboardTopSeller from '../presentation/dashboard/common/CommonDashboardTopSeller';
-import ThemeContext from '../../contexts/themeContext';
+import CommonDashboardAlert from '../../presentation/dashboard/common/CommonDashboardAlert';
+import CommonDashboardUserCard from '../../presentation/dashboard/common/CommonDashboardUserCard';
+import CommonDashboardMarketingTeam from '../../presentation/dashboard/common/CommonDashboardMarketingTeam';
+import CommonDashboardDesignTeam from '../../presentation/dashboard/common/CommonDashboardDesignTeam';
+import CommonDashboardIncome from '../../presentation/dashboard/common/CommonDashboardIncome';
+import CommonDashboardRecentActivities from '../../presentation/dashboard/common/CommonDashboardRecentActivities';
+import CommonDashboardUserIssue from '../../presentation/dashboard/common/CommonDashboardUserIssue';
+import CommonDashboardSalesByStore from '../../presentation/dashboard/common/CommonDashboardSalesByStore';
+import CommonDashboardWaitingAnswer from '../../presentation/dashboard/common/CommonDashboardWaitingAnswer';
+import CommonMyWallet from '../../_common/CommonMyWallet';
+import CommonDashboardTopSeller from '../../presentation/dashboard/common/CommonDashboardTopSeller';
+import ThemeContext from '../../../contexts/themeContext';
 
 const DashboardPage = () => {
 	const { mobileDesign } = useContext(ThemeContext);
@@ -89,7 +89,6 @@ const DashboardPage = () => {
 					</div>
 
 					<div className='col-xxl-6'>
-                    <h1>test</h1>
 						<CommonDashboardIncome activeTab={activeTab} />
 					</div>
 					<div className='col-xxl-3'>

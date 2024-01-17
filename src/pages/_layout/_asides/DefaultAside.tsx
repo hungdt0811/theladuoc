@@ -5,13 +5,13 @@ import Brand from '../../../layout/Brand/Brand';
 import Navigation, { NavigationLine } from '../../../layout/Navigation/Navigation';
 import User from '../../../layout/User/User';
 import {
-	managementMenu,
-	developmentMenu,
-} from '../../../menu-ct';
-import {
 	componentPagesMenu,
 	gettingStartedPagesMenu,
 } from '../../../menu';
+import {
+	managementMenu,
+	developmentMenu,
+} from '../../../menu-ct';
 import ThemeContext from '../../../contexts/themeContext';
 import Card, { CardBody } from '../../../components/bootstrap/Card';
 import Hand from '../../../assets/img/hand.png';

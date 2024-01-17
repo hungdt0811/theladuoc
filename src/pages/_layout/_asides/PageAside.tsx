@@ -7,7 +7,7 @@ import User from '../../../layout/User/User';
 import {
 	managementMenu,
 	developmentMenu,
-} from '../../../menu';
+} from '../../../menu-ct';
 import ThemeContext from '../../../contexts/themeContext';
 import Card, { CardBody } from '../../../components/bootstrap/Card';
 import Hand from '../../../assets/img/hand.png';
