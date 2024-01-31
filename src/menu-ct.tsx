@@ -226,3 +226,39 @@ export const developmentMenu = {
 		},
 	},
 }
+
+export const customsMenu = {
+	// operate: {
+	// 	id: 'operate',
+	// 	text: 'Vận hành',
+	// 	path: 'student',
+	// 	icon: 'Book',
+	// 	subMenu: {}
+	// },
+	student: {
+		id: 'student',
+		text: 'Học viên',
+		path: 'student/waiting',
+		icon: 'Book',
+		subMenu: {
+			waiting: {
+				id: 'waiting',
+				text: 'Đang chờ',
+				path: 'student/waiting',
+				icon: 'BuildCircle',
+			},
+			takingCare: {
+				id: 'takingCare',
+				text: 'Đang Chăm',
+				path: 'student/takingCare',
+				icon: 'DirectionsRun',
+			},
+			studying: {
+				id: 'studying',
+				text: 'Đang học',
+				path: 'student/studying',
+				icon: 'SnippetFolder',
+			},
+		},
+	},
+}

@@ -3,6 +3,7 @@ import { RouteProps } from 'react-router-dom';
 import {
 	managementMenu,
 	developmentMenu,
+	customsMenu,
 } from '../menu-ct';
 
 // Khai bao component can su dung
@@ -29,6 +30,9 @@ const DEVELOPMENT = {
 	},
 	E_LEARNING: {
 		LIST: lazy(() => import('../pages/custom/e_learning/e_learning'))
+	},
+	STUDENT: {
+		WATTING: lazy(() => import('../pages/custom/student/WaitingStudent'))
 	}
 
 }
@@ -57,6 +61,10 @@ const management: RouteProps[] = [
 	{
 		path: managementMenu.studentCategory.subMenu.freeType.path,
 		element: <MANAGEMENT.STUDENT.LIST />
+	},
+	{
+		path: customsMenu.student.subMenu.waiting.path,
+		element: <DEVELOPMENT.STUDENT.WATTING />,
 	},
 ]
 const feature: RouteProps[] = [
