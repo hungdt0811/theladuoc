@@ -38,7 +38,7 @@ const DefaultAside = () => {
 				<Brand asideStatus={asideStatus} setAsideStatus={setAsideStatus} />
 			</AsideHead>
 			<AsideBody>
-				{!doc && (
+				{(
 					<>
 						<NavigationLine />
 						<Navigation menu={managementMenu} id='manager-page' />
@@ -62,14 +62,14 @@ const DefaultAside = () => {
 					</>
 				)}
 
-				{doc && (
+				{/* {doc && (
 					<>
 						<Navigation menu={gettingStartedPagesMenu} id='aside-docMenu' />
 						<NavigationLine />
 						<Navigation menu={componentPagesMenu} id='aside-componentsMenu' />
 						<NavigationLine />
 					</>
-				)}
+				)} */}
 
 				{asideStatus && doc && (
 					<Card className='m-3 '>

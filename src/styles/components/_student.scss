@@ -1,0 +1,58 @@
+.margin-r{
+    margin-right: 10px;
+}
+
+.page-layout{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    width: 100%;
+
+}
+
+.filter-data{
+    margin-bottom: 15px;
+    width: 10%;
+    transition: 0.25s;
+    &.expand {
+        width: 100%;
+    }
+}
+
+.custom-action{
+    cursor: pointer;
+    &:hover{
+        color: #1677ff;
+    }
+}
+
+.text-valid {
+    color: #52c41a;
+}
+
+.text-invalid {
+    color: #ff4d4f;
+}
+
+
+///css filter table
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    span {
+        padding-right: 5px;
+    }
+    .text-end{
+        text-align: end;
+    }
+}
+
+.btn-form {
+    margin-top: 20px;
+}
+
+.btn-custom {
+    min-width: 90px;
+    margin-right: 8px;
+}

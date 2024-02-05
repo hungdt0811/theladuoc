@@ -56,7 +56,7 @@ const management: RouteProps[] = [
 	},
 	{
 		path: managementMenu.studentCategory.subMenu.penddingType.path,
-		element: <MANAGEMENT.STUDENT.LIST />
+		element: <DEVELOPMENT.STUDENT.WATTING />
 	},
 	{
 		path: managementMenu.studentCategory.subMenu.freeType.path,
